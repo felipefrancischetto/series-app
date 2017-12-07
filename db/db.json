@@ -1,0 +1,44 @@
+{
+  "series": [
+    {
+      "id": 1,
+      "name": "Game of Thones",
+      "status": "watched",
+      "genre": "Fantasia",
+      "commennts": "muito bom!"
+    },
+    {
+      "id": 2,
+      "name": "Game of Thones",
+      "status": "watched",
+      "genre": "Fantasia",
+      "commennts": "muito bom!"
+    },
+    {
+      "id": 3,
+      "name": "Game of Thones",
+      "status": "watched",
+      "genre": "Fantasia",
+      "commennts": "muito bom!"
+    },
+    {
+      "id": 4,
+      "name": "Game of Thones",
+      "status": "watched",
+      "genre": "Fantasia",
+      "commennts": "muito bom!"
+    },
+    {
+      "id": 5,
+      "name": "Game of Thones",
+      "status": "watched",
+      "genre": "Fantasia",
+      "commennts": "muito bom!"
+    }
+  ],
+
+  "genres": [
+    "Drama", "Fantasia", "Ação"
+  ]
+  
+}
