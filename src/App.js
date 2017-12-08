@@ -1,48 +1,28 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from'react-router-dom'
+import 'semantic-ui-css/semantic.min.css';
 
-import api from './Api'
+import Navbar from './Navbar'
+import Home from './Home'
+import Movies from './Movies'
+import Series from './Series'
+import About from './About'
+import Footer from './Footer'
+
+//functiom-stateless component
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    
-    this.state = {
-      genres: [],
-      isLoading: false
-    }
-  }
-
-  componentDidMount() {
-    this.setState({ isLoading: true })
-    api.loadGenres().then((res) => {
-      this.setState({
-        isLoading: false, genres: res.data
-      })
-    })
-  }
-
-  renderGenreLink(genre){
-    return (
-      <span>&nbsp;<a href=''> {genre } </a>&nbsp; </span>
-    )
-  }
 
   render() {
     return (
       <Router>
         <div>
-          <h1>Filmes App {this.state.count}</h1>
-          {
-            this.state.isLoading && <span> Aguarde, carregando...</span>
-          }
-          {
-            !this.state.isLoading && 
-            <div>
-              ver séries do gêneros: { this.state.genres.map(this.renderGenreLink) }
-            </div>
-            
-          }
+          <Navbar/>
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/movies' component={Movies}/>
+            <Route exact path='/series' component={Series}/>
+            <Route exact path='/about' component={About}/>
+          <Footer/>
         </div>
       </Router>
     )  
